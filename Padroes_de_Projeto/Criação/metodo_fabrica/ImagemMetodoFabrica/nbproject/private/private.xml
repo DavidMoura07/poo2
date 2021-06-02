@@ -2,14 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/home/david/Documents/IFES/POO2/poo2/Padroes_de_Projeto/Criação/metodo_fabrica/ImagemMetodoFabrica/src/metodo/fabrica/FormatoGif.java</file>
-            <file>file:/home/david/Documents/IFES/POO2/poo2/Padroes_de_Projeto/Criação/metodo_fabrica/ImagemMetodoFabrica/src/metodo/fabrica/MetodoFabrica.java</file>
-            <file>file:/home/david/Documents/IFES/POO2/poo2/Padroes_de_Projeto/Criação/metodo_fabrica/ImagemMetodoFabrica/src/metodo/fabrica/Formato.java</file>
-            <file>file:/home/david/Documents/IFES/POO2/poo2/Padroes_de_Projeto/Criação/metodo_fabrica/ImagemMetodoFabrica/src/metodo/fabrica/FabricaFormato.java</file>
-            <file>file:/home/david/Documents/IFES/POO2/poo2/Padroes_de_Projeto/Criação/metodo_fabrica/ImagemMetodoFabrica/src/metodo/fabrica/FormatoJpeg.java</file>
-            <file>file:/home/david/Documents/IFES/POO2/poo2/Padroes_de_Projeto/Criação/metodo_fabrica/ImagemMetodoFabrica/src/metodo/fabrica/Imagem.java</file>
-            <file>file:/home/david/Documents/IFES/POO2/poo2/Padroes_de_Projeto/Criação/metodo_fabrica/ImagemMetodoFabrica/src/metodo/fabrica/FormatoBmp.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
