@@ -6,3 +6,7 @@ Dessa forma, quando uma classe do seu sistema precisar de um novo número será 
 Para esse exercício crie um projeto do novo no Netbeans. 
 Você pode iniciar a partir de um número de telefone como por exemplo: 999990101. 
 Para que o número não se repita entre uma execução e outra do seu programa você deve armazenar o último número em arquivo.
+
+#### Link da video-aula
+
+[![Watch the video](https://refactoring.guru/images/patterns/content/singleton/singleton.png?id=108a0b9b5ea5c4426e0a)](https://www.youtube.com/watch?v=zZcBcNV38DA&ab_channel=FelipeFrechiani)
