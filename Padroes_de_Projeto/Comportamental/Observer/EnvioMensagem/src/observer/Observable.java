@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author david
  */
-public class Observable {
+public abstract class Observable {
     private final ArrayList<Observer> monitores = new ArrayList<>();
     
     public void addObserver(Observer ob){
