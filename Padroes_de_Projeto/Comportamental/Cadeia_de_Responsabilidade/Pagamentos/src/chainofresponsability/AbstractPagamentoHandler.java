@@ -28,6 +28,6 @@ public abstract class AbstractPagamentoHandler implements PagamentoHandler {
         return valorRestante;
     }    
     
-    protected abstract int handlePagamento(int valor);
+    protected abstract int handlePagamento(int valorSaque, int valorNota);
 }
 
