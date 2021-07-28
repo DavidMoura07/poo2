@@ -29,6 +29,8 @@ public class TelaPagamentos extends javax.swing.JFrame {
         caixaSelecaoBoleto = new javax.swing.JCheckBox();
         caixaSelecaoCartao = new javax.swing.JCheckBox();
         jLabel2 = new javax.swing.JLabel();
+        caixaSelecaoCheque = new javax.swing.JCheckBox();
+        caixaSelecaoDinheiro = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,8 +57,27 @@ public class TelaPagamentos extends javax.swing.JFrame {
         });
 
         caixaSelecaoCartao.setText("Cartão");
+        caixaSelecaoCartao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                caixaSelecaoCartaoActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Forma de Pagamento:");
+
+        caixaSelecaoCheque.setText("Cheque");
+        caixaSelecaoCheque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                caixaSelecaoChequeActionPerformed(evt);
+            }
+        });
+
+        caixaSelecaoDinheiro.setText("Dinheiro");
+        caixaSelecaoDinheiro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                caixaSelecaoDinheiroActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -79,7 +100,11 @@ public class TelaPagamentos extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton1)
                         .addGap(142, 142, 142)))
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(caixaSelecaoCheque)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(caixaSelecaoDinheiro)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,7 +117,9 @@ public class TelaPagamentos extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(caixaSelecaoBoleto)
-                    .addComponent(caixaSelecaoCartao))
+                    .addComponent(caixaSelecaoCartao)
+                    .addComponent(caixaSelecaoCheque)
+                    .addComponent(caixaSelecaoDinheiro))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addContainerGap(169, Short.MAX_VALUE))
@@ -113,15 +140,38 @@ public class TelaPagamentos extends javax.swing.JFrame {
                 
        PagamentoHandler boleto = new BoletoHandler();               
        PagamentoHandler cartao = new CartaoHandler();
+       PagamentoHandler cheque = new ChequeHandler();
+       PagamentoHandler dinheiro = new DinheiroHandler();
+       
        boleto.setNextHandler(cartao);
+       cartao.setNextHandler(cheque);
+       cheque.setNextHandler(dinheiro);
+       
        ArrayList lista = new ArrayList();       
        if(caixaSelecaoBoleto.isSelected())
           lista.add(BoletoHandler.BOLETO);
        if(caixaSelecaoCartao.isSelected())
-          lista.add(CartaoHandler.CARTAO);                     
+          lista.add(CartaoHandler.CARTAO); 
+       if(caixaSelecaoCheque.isSelected())
+          lista.add(ChequeHandler.CHEQUE); 
+       if(caixaSelecaoDinheiro.isSelected())
+          lista.add(DinheiroHandler.DINHEIRO); 
+       
        boleto.processHander(lista, Integer.parseInt(valorFatura.getText()));                       
        
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void caixaSelecaoCartaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caixaSelecaoCartaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_caixaSelecaoCartaoActionPerformed
+
+    private void caixaSelecaoChequeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caixaSelecaoChequeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_caixaSelecaoChequeActionPerformed
+
+    private void caixaSelecaoDinheiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caixaSelecaoDinheiroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_caixaSelecaoDinheiroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -162,6 +212,8 @@ public class TelaPagamentos extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JCheckBox caixaSelecaoBoleto;
     private javax.swing.JCheckBox caixaSelecaoCartao;
+    private javax.swing.JCheckBox caixaSelecaoCheque;
+    private javax.swing.JCheckBox caixaSelecaoDinheiro;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
